@@ -1,0 +1,82 @@
+body {
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h2 {
+  margin-top: 2em;
+}
+
+body,
+p,
+form,
+input {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+input {
+  line-height: 1.6em;
+  font-size: 1em;
+}
+
+button,
+input[type='submit'] {
+  line-height: 1.6em;
+  margin-top: 1em;
+  font-size: 1em;
+}
+
+p,
+li,
+dt,
+dd,
+code,
+button {
+  line-height: 1.4em;
+}
+
+dd {
+  margin-bottom: 0.5em;
+}
+
+body {
+  padding: 2em;
+}
+
+form label {
+  margin-right: 1em;
+}
+
+pre > code {
+  display: block;
+}
+
+code {
+  background-color: #0a0a32;
+  color: #ff8f1f;
+  padding: 0.2em;
+}
+
+.top-nav {
+  position: fixed;
+  top: 20px;
+}
+
+.sub-text {
+  font-size: 0.7em;
+}
+
+.note {
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  font-size: 0.9em;
+  font-weight: 300;
+}

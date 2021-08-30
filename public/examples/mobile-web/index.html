@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Mobile Web PhoneCheck</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <nav class="top-nav"><a href="/">⬅ back</a></nav>
+
+    <img
+      id="logo"
+      src="/images/tru-vertical-square-dark-text.png"
+      alt="tru.ID logo"
+    />
+
+    <h1>Mobile Web PhoneCheck</h1>
+    <div id="checking_notice">
+      <p>Checking your device coverage. Please wait.</p>
+    </div>
+    <div id="wifi_notice" class="hidden">
+      <p>
+        You do not appear to be on a mobile data connection. Please
+        <b>turn off your WiFi or connect to a mobile data network</b> and retry.
+      </p>
+      <button id="wifi_retry">Retry</button>
+    </div>
+    <div id="no_coverage_notice" class="hidden">
+      <p>
+        Your Mobile Network is not supported. If you think this is a mistake you
+        can still try to verify your phone number
+      </p>
+      <button id="no_coverage_retry">Retry</button>
+    </div>
+    <div id="error_notice">
+      <p><span id="error_notice_message"></span> Please retry.</p>
+      <button id="error_retry">Retry</button>
+    </div>
+
+    <div id="phone_check" class="hidden">
+      <form id="phone_check_form" method="post" action="/phone-check">
+        <div class="form-row">
+          <label for="phone_number">Phone Number</label>
+          <input id="phone_number" type="tel" name="phone_number" required />
+        </div>
+        <!-- Radio button hidden for demo purposes. Remove 'hidden' class to allow selection of check method -->
+        <div class="form-row hidden">
+          <label for="check_method">Check Method</label>
+          <div>
+            <input
+              type="radio"
+              id="check_method_image"
+              name="check_method"
+              value="check_method_image"
+              checked
+            />
+            <label for="check_method_image">image</label>
+          </div>
+
+          <div>
+            <input
+              type="radio"
+              id="check_method_window"
+              name="check_method"
+              value="check_method_window"
+            />
+            <label for="check_method_window">window</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <input type="submit" value="Verify my phone number" />
+        </div>
+      </form>
+
+      <div id="check_progress"></div>
+    </div>
+
+    <div class="sub-text" id="device_info"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tru_id/tru-sdk-web/dist/tru-id-sdk.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bowser@2.11.0/es5.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

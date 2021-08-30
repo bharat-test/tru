@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>tru.ID Example Server</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body>
+    <h1><b>tru.ID</b> Example Server</h1>
+    <p>
+      The example server code sample provides a basic example of how you can
+      integrate <a href="https://tru.id">tru.ID</a> into a back-end Node.js
+      server where the back-end is effectively middleware that ensures the
+      client can be trusted and that the API calls to the <b>tru.ID</b> API are
+      authenticated.
+    </p>
+
+    <h2>Routes</h2>
+    <p>It exposes the following routes as examples:</p>
+
+    <h3>PhoneCheck</h3>
+    <dl>
+      <dt><code>POST /phone-check</code></dt>
+      <dd>to create a PhoneCheck resource</dd>
+
+      <dt><code>GET /phone-check</code></dt>
+      <dd>to get a PhoneCheck resource</dd>
+
+      <dt><code>POST /phone-check/callback</code></dt>
+      <dd>to handle a PhoneCheck callback from the <b>tru.ID</b> platform</dd>
+    </dl>
+
+    <h3>SubscriberCheck</h3>
+    <dl>
+      <dt><code>POST /subscriber-check</code></dt>
+      <dd>to create a SubscriberCheck resource</dd>
+
+      <dt><code>GET /subscriber-check</code></dt>
+      <dd>to get a SubscriberCheck resource</dd>
+    </dl>
+
+    <h3>SIMCheck</h3>
+    <p>
+      The <b>tru.ID</b> SIMCheck API provides information on when a SIM card
+      associated with a mobile phone number was last changed. This can be used
+      when augmenting existing 2FA or anti-fraud workflows.
+    </p>
+    <dl>
+      <dt><code>POST /sim-check</code></dt>
+      <dd>to create a SIMCheck</dd>
+    </dl>
+
+    <h3>Coverage</h3>
+    <p>
+      The <b>tru.ID</b> Coverage API provides two endpoints exposing
+      reachability information for the platform and devices.
+    </p>
+    <dl>
+      <dt><code>GET /countries/{country_code}</code></dt>
+      <dd>get platform coverage based on a country code</dd>
+
+      <dt><code>GET /device_ips/{ip}</code></dt>
+      <dd>
+        get the mobile network that a device is on along with products that are
+        supported based on device IP address
+      </dd>
+    </dl>
+
+    <h3>Device IP Address (Helper)</h3>
+    <p>
+      A helper API to get the IP Address of a device. This is not a
+      <b>tru.ID</b> API).
+    </p>
+    <dt><code>GET /my-ip</code></dt>
+    <dd>
+      Get IP Address of the requesting device.
+      <p>Example response:</p>
+      <pre>
+<code>{
+    "ip_address": "192.168.0.1"
+}</code>
+</pre>
+    </dd>
+
+    <h2>Example Pages</h2>
+    <p>The following pages allow you to test out some of the functionality.</p>
+
+    <h3>PhoneCheck</h3>
+    <ul>
+      <li>
+        <a href="/examples/mobile-web/">Mobile Web PhoneCheck</a>
+      </li>
+      <li>QR Code (coming soon)</li>
+    </ul>
+
+    <h3>SIMCheck</h3>
+    <ul>
+      <li>
+        <a href="/examples/sim-check/">Create a SIMCheck</a>
+      </li>
+    </ul>
+
+    <h3>Coverage</h3>
+    <ul>
+      <li>
+        <a href="/examples/country/">Country Coverage</a>
+      </li>
+      <li>
+        <a href="/examples/device/">Device Coverage by IP Address</a>
+      </li>
+    </ul>
+
+    <h3>Device IP Address (Helper)</h3>
+    <ul>
+      <li>
+        <a href="/examples/my-ip/">My IP Address</a>
+      </li>
+    </ul>
+  </body>
+</html>

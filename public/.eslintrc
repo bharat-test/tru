@@ -1,0 +1,11 @@
+{
+  "extends": "../.eslintrc",
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "axios": true,
+    "tru": true,
+    "bowser": true
+  }
+}

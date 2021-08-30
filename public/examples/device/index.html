@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Device Coverage by IP Address</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body>
+    <nav class="top-nav"><a href="/">⬅ back</a></nav>
+
+    <h1>Device Coverage by IP Address</h1>
+    <form method="get" action="/device">
+      <label for="ip_address">IP Address</label>
+      <input type="text" name="id_address" />
+      <div class="sub-text">Optional. Leave blank to use device IP.</div>
+      <input type="submit" value="Submit" />
+    </form>
+
+    <p class="note">
+      Note: The form submits to an endpoint and JSON will be shown in the
+      browser.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+body {
+  text-align: center;
+}
+
+#logo {
+  width: 100%;
+  max-width: 200px;
+  margin: auto;
+}
+
+#checking_notice {
+  display: block;
+}
+
+#error_notice {
+  display: none;
+}
+
+.error #error_notice {
+  display: block;
+}
+
+.no-coverage #checking_notice,
+.no-mobile-ip #checking_notice,
+.has-coverage #checking_notice,
+.error #checking_notice,
+.checking #checking_notice {
+  display: none;
+}
+
+.loading #phone_check,
+.error #phone_check {
+  display: none;
+}
+
+#phone_check {
+  margin-top: 20px;
+}
+
+.loading #wifi_notice,
+.checking #wifi_notice {
+  display: none;
+}
+
+.error #phone_check {
+  display: none;
+}
+
+.has-coverage #wifi_notice,
+.error #wifi_notice,
+.checking #wifi_notice {
+  display: none;
+}
+
+.no-coverage #wifi_notice {
+  display: none;
+}
+.no-coverage #no_coverage_notice {
+  display: block;
+}
+
+.no-mobile-ip #no_coverage_notice {
+  display: none;
+}
+.no-mobile-ip #wifi_notice {
+  display: block;
+}
+
+label[for='phone_number'] {
+  font-weight: 600;
+}
+
+#phone_number {
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.has-coverage #phone_check {
+  display: block;
+}
+
+#check_progress {
+  margin-top: 1.5em;
+  text-align: left;
+  padding-left: 10%;
+}
+
+#check_progress div {
+  margin-bottom: 0.5em;
+  line-height: 1.2em;
+}
+
+.form-row {
+  display: block;
+  margin-top: 1em;
+}
+
+#device_info {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  top: 5px;
+}
+
+input[type='submit'] {
+  padding: 10px;
+  color: #fff;
+  background-color: #00b5ff;
+  border: 0;
+  border-radius: 5px;
+}
+
+.checking input[type='submit'] {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 1s, opacity 1s;
+}
+
+.hidden {
+  display: none;
+}
